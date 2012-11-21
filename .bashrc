@@ -21,6 +21,26 @@ prodmasterdiff () {
     git diff --stat=120,100 prod/master...HEAD
 }
 
+# Colour the hostname part depending on what Shutterstock environment you're in
+function __host_ps1()
+{
+    hostname="$(hostname)"
+    if [[ $hostname =~ '.*DEV.*' ]]; then
+        tput setaf 4
+    elif [[ $hostname =~ 'neil-ubuntu' ]]; then
+        tput setaf 5
+    elif [[ $hostname =~ 'worker-DEV' ]]; then
+        tput setaf 2
+    elif [[ $hostname =~ 'lvs[0-9]c' ]]; then
+        tput setaf 1
+    elif [[ $hostname =~ '(shutter)?worker[0-9]*' ]]; then
+        tput setaf 3
+    fi
+
+    printf "$1" "$hostname"
+    tput sgr0
+}
+
 # Colour the Git branch based on whether it's a real branch or a "MERGING", etc, kind of state branch
 function __git_ps1_branch()
 {
