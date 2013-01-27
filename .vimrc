@@ -33,7 +33,7 @@ set wrap
 "map <F1> :set mouse=r<CR>
 "map <F2> :set mouse=a<CR>
 autocmd BufRead,BufNewFile *.erb set filetype=eruby.html  " syntax higlighting for ruby ERB files
-set ignorecase
+set smartcase
 
 set fileformat=unix
 
