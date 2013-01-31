@@ -8,6 +8,8 @@ set whichwrap=b,s,h,l,<,>,[,]  " allow the cursor to wrap on anything
 set backspace=2                " fully enable backspace to delete anything in insert mode
 set noshowmatch                " don't go back to the matching bracket (annoying)
 
+autocmd FileType python set expandtab " for python, indent with spaces
+
 " personal prefrences
 set background=dark
 colorscheme default
