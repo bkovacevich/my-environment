@@ -59,6 +59,6 @@ PS1='\[\033[00;31m\]$(r=$?; if test $r -ne 0; then echo "[$r]"; set ?=$r; unset 
 \[\033[01;30m\]$(date +"%Y-%m-%d %H:%M:%S")\[\033[00m\] \[\033[00;34m\]\$\[\033[00m\] '
 
 # node.js support
-. ~/nvm/nvm.sh
+. ~/.nvm/nvm.sh
 export PATH=$PATH:$HOME/node_modules/nodeunit/bin
 export PATH=$PATH:$HOME/local/bin
