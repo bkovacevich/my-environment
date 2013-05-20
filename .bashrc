@@ -7,6 +7,8 @@ fi
 
 # User specific aliases and functions
 
+alias ll='ls -ltar'
+
 # Include Git bash-completion and prompt functions
 if [ -f "$HOME/local/git-completion.bash" ]; then
     source "$HOME/local/git-completion.bash"
