@@ -27,7 +27,7 @@ au BufNewFile,BufRead *.html set ft=mason
 "syntax sync minlines=200       " always sync syntax highlighting at least 200 lines back
 set t_Co=256                   " use 256 colors
 "set clipboard=unnamed
-"set mouse=a                       " enable mouse
+set mouse=a                       " enable mouse
 set hidden                     " allow switching of buffers without saving
 set wildmode=longest:full      " don't match the first word on tabbed auto completion
 set wildmenu

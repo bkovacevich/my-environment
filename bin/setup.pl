@@ -6,7 +6,7 @@ use warnings;
 my @files = <.*>;
 
 for my $file (@files){
-	next if ($file !~ /\.\w/ || $file =~ /\.git/);
+	next if ($file !~ /\.\w/ || $file =~ /\.git$/);
 	print STDERR "Moving File: $file\n";
 	system('cp', '-R', $file, "$ENV{HOME}/");
 }
