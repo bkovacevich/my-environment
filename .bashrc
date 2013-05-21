@@ -10,12 +10,9 @@ fi
 source "$HOME/.git-completion.bash"
 source "$HOME/.git-prompt.sh"
 
+alias ls='ls -G'
 alias ll='ls -ltar'
 
-# Include Git bash-completion and prompt functions
-if [ -f "$HOME/local/git-completion.bash" ]; then
-    source "$HOME/local/git-completion.bash"
-fi
 startdiff () {
     echo git diff --stat=120,100 start-$(git branch | awk '/^\*/{print $2}')...HEAD
     git diff --stat=120,100 start-$(git branch | awk '/^\*/{print $2}')...HEAD
