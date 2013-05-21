@@ -8,6 +8,7 @@ fi
 # User specific aliases and functions
 
 source "$HOME/.git-completion.bash"
+source "$HOME/.git-prompt.sh"
 
 alias ll='ls -ltar'
 
