@@ -5,6 +5,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+shopt -s extglob
+
 # User specific aliases and functions
 
 source "$HOME/.git-completion.bash"
