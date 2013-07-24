@@ -41,6 +41,9 @@ set fileformat=unix
 
 set exrc
 
+" ; is way easier than :
+noremap ; :
+
 autocmd BufNewFile,BufRead *.js,*.json  set filetype=javascript
 autocmd FileType javascript,jade set expandtab tabstop=2 shiftwidth=2
 
