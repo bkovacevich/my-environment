@@ -1,3 +1,4 @@
+execute pathogen#infect()
 " sane editing options
 set tabstop=4                  " number of spaces that a <Tab> in the file counts for
 set shiftwidth=4               " number of spaces to use for each step of (auto)indent
@@ -11,12 +12,7 @@ set noshowmatch                " don't go back to the matching bracket (annoying
 autocmd FileType python set expandtab " for python, indent with spaces
 
 " personal prefrences
-set background=dark
-colorscheme default
-
-" different colorschemen for VCSVimDiff
-au FilterWritePost * if &diff |  colorscheme ron | else | colorscheme default | endif
-au BufWinLeave * colorscheme default
+set t_Co=256                   " use 256 colors
 
 " enable syntax highlighting
 syntax on                      " turn on syntax highlighting
@@ -25,7 +21,6 @@ au BufNewFile,BufRead *.m* set ft=mason
 au BufNewFile,BufRead *.html set ft=mason
 "filetype indent plugin on     " set indentation rules based on file type and enable filetype plugins (for matchit.vim)
 "syntax sync minlines=200       " always sync syntax highlighting at least 200 lines back
-set t_Co=256                   " use 256 colors
 "set clipboard=unnamed
 "set mouse=a                       " enable mouse
 set hidden                     " allow switching of buffers without saving
@@ -60,3 +55,4 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+colorscheme bens
